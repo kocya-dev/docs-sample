@@ -4,12 +4,12 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Sample Docs",
   description: "A Vitepress Sample",
-  base: "/docs/", // base URL
+  base: "/manuals/", // base URL
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "documents", link: "/" }, // ここに import.meta.env.VITE_DEV_NAMEというか環境に応じたアドレスを入れたい
     ],
 
     sidebar: [
@@ -17,7 +17,7 @@ export default defineConfig({
         text: "Examples",
         items: [
           { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/manuals/api-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
           { text: "Terms", link: "/terms" },
         ],
       },
@@ -34,13 +34,16 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
           { text: "Home", link: "/" },
-          { text: "Terms", link: "/terms" },
+          { text: "Examples", link: "/markdown-examples" },
         ],
 
         sidebar: [
           {
             text: "Examples",
-            items: [{ text: "Terms", link: "/terms" }],
+            items: [
+              { text: "Markdown Examples", link: "/markdown-examples" },
+              { text: "Runtime API Examples", link: "/api-examples" },
+            ],
           },
         ],
 
@@ -56,35 +59,22 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
           { text: "ホーム", link: "/ja/" },
-          { text: "利用規約", link: "/ja/terms" },
+          { text: "ドキュメント", link: "/ja/markdown-examples" },
         ],
 
         sidebar: [
           {
-            text: "例",
-            items: [{ text: "利用規約", link: "/ja/terms" }],
+            text: "取説",
+            collapsed: true,
+            items: [
+              { text: "マークダウン例", link: "/ja/markdown-examples" },
+              { text: "ランタイム API 例", link: "/ja/api-examples" },
+            ],
           },
-        ],
-
-        socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
-      },
-    },
-    tha: {
-      label: "Thailand",
-      lang: "tha", // optional, will be added  as `lang` attribute on `html` tag
-      link: "/tha/",
-
-      themeConfig: {
-        // https://vitepress.dev/reference/default-theme-config
-        nav: [
-          { text: "home", link: "/" },
-          { text: "terms", link: "/tha/terms" },
-        ],
-
-        sidebar: [
           {
-            text: "例",
-            items: [{ text: "terms", link: "/tha/terms" }],
+            text: "リリースノート",
+            collapsed: true,
+            items: [{ text: "マークダウン例", link: "/ja/markdown-examples" }],
           },
         ],
 

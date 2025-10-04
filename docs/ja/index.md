@@ -4,18 +4,15 @@ layout: home
 
 hero:
   name: "Sample Docs"
-  text: "A Vitepress Sample"
-  tagline: My great project tagline
+  text: "日本語のサンプル"
+  tagline: 日本語の補足
   actions:
     - theme: brand
       text: Markdown Examples
       link: /markdown-examples
     - theme: alt
       text: API Examples
-      link: /manuals/api-examples
-    - theme: alt
-      text: terms
-      link: /terms
+      link: ./manuals/api-examples
 
 features:
   - title: Feature A
