@@ -16,6 +16,7 @@
     "manuals:preview": "vitepress preview manuals"
   },
   "devDependencies": {
+    "@types/node": "^24.6.2",
     "vitepress": "^1.6.4"
   }
 }

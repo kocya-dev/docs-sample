@@ -2,4 +2,4 @@
 outline: deep
 ---
 
-# Terms (ja)
+# Cookie
