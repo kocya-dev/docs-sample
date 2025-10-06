@@ -26,7 +26,7 @@ export default ({ mode }) => {
           // https://vitepress.dev/reference/default-theme-config
           nav: [
             { text: "Manual", link: "/" },
-            { text: "Docs", link: `${env.VITE_ENV_NAME}/docs/` },
+            { text: "Docs", link: `${env.VITE_ENV_NAME}/docs/`, target: "_self" },
           ],
 
           sidebar: [
@@ -56,7 +56,7 @@ export default ({ mode }) => {
           // https://vitepress.dev/reference/default-theme-config
           nav: [
             { text: "マニュアル", link: "/ja/" },
-            { text: "ドキュメント", link: `${env.VITE_ENV_NAME}/docs/ja/` },
+            { text: "ドキュメント", link: `${env.VITE_ENV_NAME}/docs/ja/`, target: "_self" },
           ],
 
           sidebar: [
