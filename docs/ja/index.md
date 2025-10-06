@@ -8,11 +8,14 @@ hero:
   tagline: 日本語の補足
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: ./manuals/api-examples
+      text: Privacy
+      link: /ja/privacy
+    - theme: brand
+      text: Terms
+      link: /ja/terms
+    - theme: brand
+      text: Cookie
+      link: /ja/cookie
 
 features:
   - title: Feature A

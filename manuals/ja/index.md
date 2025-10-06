@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: API Examples
       link: /ja/api-examples
+    - theme: alt
+      text: Release Note
+      link: /ja/release-note
 
 features:
   - title: Feature A

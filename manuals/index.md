@@ -14,8 +14,8 @@ hero:
       text: API Examples
       link: /api-examples
     - theme: alt
-      text: terms
-      link: /terms
+      text: Release Note
+      link: /release-note
 
 features:
   - title: Feature A

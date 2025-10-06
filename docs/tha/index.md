@@ -4,18 +4,18 @@ layout: home
 
 hero:
   name: "Sample Docs"
-  text: "A Vitepress Sample"
-  tagline: My great project tagline
+  text: "日本語のサンプル"
+  tagline: 日本語の補足
   actions:
     - theme: brand
       text: Privacy
-      link: /privacy
+      link: /tha/privacy
     - theme: brand
       text: Terms
-      link: /terms
+      link: /tha/terms
     - theme: brand
       text: Cookie
-      link: /cookie
+      link: /tha/cookie
 
 features:
   - title: Feature A

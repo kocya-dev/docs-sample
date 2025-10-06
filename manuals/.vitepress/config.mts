@@ -11,23 +11,10 @@ export default ({ mode }) => {
     description: "A Vitepress Sample",
     base: "/manuals/", // base URL
     themeConfig: {
+      search: {
+        provider: "local",
+      },
       // https://vitepress.dev/reference/default-theme-config
-      nav: [
-        { text: "Home", link: "/" },
-        { text: "documents", link: "/" }, // ここに import.meta.env.VITE_DEV_NAMEというか環境に応じたアドレスを入れたい
-      ],
-
-      sidebar: [
-        {
-          text: "Examples",
-          items: [
-            { text: "Markdown Examples", link: "/markdown-examples" },
-            { text: "Runtime API Examples", link: "/api-examples" },
-            { text: "Terms", link: "/terms" },
-          ],
-        },
-      ],
-
       socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
     },
     locales: {
@@ -38,8 +25,8 @@ export default ({ mode }) => {
         themeConfig: {
           // https://vitepress.dev/reference/default-theme-config
           nav: [
-            { text: "Home", link: "/" },
-            { text: "Examples", link: "/markdown-examples" },
+            { text: "Manual", link: "/" },
+            { text: "Docs", link: `${env.VITE_ENV_NAME}/docs/` },
           ],
 
           sidebar: [
@@ -49,6 +36,11 @@ export default ({ mode }) => {
                 { text: "Markdown Examples", link: "/markdown-examples" },
                 { text: "Runtime API Examples", link: "/api-examples" },
               ],
+            },
+            {
+              text: "Release Notes",
+              collapsed: true,
+              items: [{ text: "Release Notes", link: "/release-note" }],
             },
           ],
 
@@ -63,8 +55,8 @@ export default ({ mode }) => {
         themeConfig: {
           // https://vitepress.dev/reference/default-theme-config
           nav: [
-            { text: "ホーム", link: "/ja/" },
-            { text: "ドキュメント", link: env.VITE_ENV_NAME == "dev" ? "/ja/markdown-examples" : "/markdown-examples" },
+            { text: "マニュアル", link: "/ja/" },
+            { text: "ドキュメント", link: `${env.VITE_ENV_NAME}/docs/ja/` },
           ],
 
           sidebar: [
@@ -79,7 +71,7 @@ export default ({ mode }) => {
             {
               text: "リリースノート",
               collapsed: true,
-              items: [{ text: "マークダウン例", link: "/ja/markdown-examples" }],
+              items: [{ text: "リリースノート", link: "/ja/release-note" }],
             },
           ],
 
